@@ -17,6 +17,7 @@ class Seotakeoff {
             },
             inputs: ['main'],
             outputs: ['main'],
+            usableAsTool: true,
             credentials: [
                 {
                     name: 'seotakeoffApi',

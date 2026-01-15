@@ -24,6 +24,7 @@ export class Seotakeoff implements INodeType {
     },
     inputs: ['main'],
     outputs: ['main'],
+    usableAsTool: true,
     credentials: [
       {
         name: 'seotakeoffApi',
