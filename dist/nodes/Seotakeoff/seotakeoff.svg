@@ -1,8 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-  <rect width="60" height="60" rx="8" fill="#6366f1"/>
-  <path d="M15 35L25 25L35 35L45 20" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="25" cy="25" r="3" fill="white"/>
-  <circle cx="35" cy="35" r="3" fill="white"/>
-  <circle cx="45" cy="20" r="3" fill="white"/>
-  <path d="M15 45H45" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="rocketGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="flameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FBBF24"/>
+      <stop offset="100%" style="stop-color:#F97316"/>
+    </linearGradient>
+  </defs>
+  <!-- Rocket body -->
+  <path d="M38 8C38 8 22 18 18 32C16 38 18 42 18 42L24 40C24 40 26 44 30 44C34 44 36 40 36 40L42 42C42 42 44 38 42 32C38 18 38 8 38 8Z" fill="url(#rocketGradient)" stroke="#7C3AED" stroke-width="1.5"/>
+  <!-- Window -->
+  <circle cx="30" cy="26" r="5" fill="white" opacity="0.9"/>
+  <!-- Left fin -->
+  <path d="M18 42C18 42 12 40 14 46C16 50 22 48 22 48L18 42Z" fill="#6366F1"/>
+  <!-- Right fin -->
+  <path d="M42 42C42 42 48 40 46 46C44 50 38 48 38 48L42 42Z" fill="#6366F1"/>
+  <!-- Flame -->
+  <path d="M26 44C26 44 28 54 30 54C32 54 34 44 34 44C34 44 32 50 30 50C28 50 26 44 26 44Z" fill="url(#flameGradient)"/>
 </svg>
