@@ -1,0 +1,60 @@
+{
+  "name": "n8n-nodes-seotakeoff",
+  "version": "0.1.0",
+  "description": "n8n node for SEOTakeoff - AI-powered SEO content generation",
+  "keywords": [
+    "n8n-community-node-package",
+    "seo",
+    "content",
+    "ai",
+    "article",
+    "blog"
+  ],
+  "license": "MIT",
+  "homepage": "https://seotakeoff.com",
+  "author": {
+    "name": "SEOTakeoff",
+    "email": "support@seotakeoff.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gmann14/n8n-nodes-seotakeoff.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials --ext .ts --fix",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/SeotakeoffApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Seotakeoff/Seotakeoff.node.js",
+      "dist/nodes/Seotakeoff/SeotakeoffTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^18.0.0",
+    "gulp": "^4.0.2",
+    "jest": "^29.0.0",
+    "n8n-workflow": "^1.0.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
