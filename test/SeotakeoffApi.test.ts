@@ -41,7 +41,7 @@ describe('SeotakeoffApi Credentials', () => {
   });
 
   test('has test request configured', () => {
-    expect(credentials.test.request.url).toBe('/api/v1/zapier/website');
+    expect(credentials.test.request.url).toBe('/api/zapier/websites');
   });
 
   test('test request uses correct base URL', () => {

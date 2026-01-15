@@ -5,18 +5,16 @@ exports.seotakeoffApiRequestAllItems = seotakeoffApiRequestAllItems;
 async function seotakeoffApiRequest(method, endpoint, body = {}, query = {}) {
     const options = {
         method,
-        body,
-        qs: query,
-        uri: `https://api.seotakeoff.com/api/zapier${endpoint}`,
+        url: `https://api.seotakeoff.com/api/zapier${endpoint}`,
         json: true,
     };
-    if (Object.keys(body).length === 0) {
-        delete options.body;
+    if (Object.keys(body).length > 0) {
+        options.body = body;
     }
-    if (Object.keys(query).length === 0) {
-        delete options.qs;
+    if (Object.keys(query).length > 0) {
+        options.qs = query;
     }
-    return await this.helpers.requestWithAuthentication.call(this, 'seotakeoffApi', options);
+    return await this.helpers.httpRequestWithAuthentication.call(this, 'seotakeoffApi', options);
 }
 async function seotakeoffApiRequestAllItems(method, endpoint, body = {}, query = {}) {
     const returnData = [];
